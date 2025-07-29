@@ -1,0 +1,18 @@
+{
+  "name": "child-safety-scorm",
+  "version": "1.0.0",
+  "description": "SCORM-compliant child safety welfare assessment module",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "package": "npm run build && cd dist && zip -r ../child-safety-scorm.zip ."
+  },
+  "keywords": ["scorm", "child-safety", "assessment", "welfare"],
+  "author": "Child Safety Assessment Team",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.4.2"
+  }
+}

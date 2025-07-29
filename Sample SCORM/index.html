@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Safety Check - A Safe Space for You</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <script src="https://unpkg.com/tincanjs/build/tincan-min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/tincanjs@0.50.0/build/tincan-min.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <div class="content">
+                <div class="mascot">🌟</div>
+                <h1>My Safety Check</h1>
+                <p class="subtitle">A safe space where you can share how you feel</p>
+                <div class="safety-notice">
+                    <h3>🛡️ This is a safe place</h3>
+                    <ul>
+                        <li>Your answers are private</li>
+                        <li>Take your time</li>
+                        <li>You can stop anytime</li>
+                        <li>There are no wrong answers</li>
+                    </ul>
+                </div>
+                <button class="btn btn-primary" onclick="startAssessment()">
+                    Let's Start
+                </button>
+            </div>
+        </div>
+
+        <!-- Question Screen -->
+        <div id="question-screen" class="screen">
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="content">
+                <div class="question-counter">
+                    Question <span id="current-q">1</span> of <span id="total-q">12</span>
+                </div>
+                <div class="question-card">
+                    <h2 id="question-text"></h2>
+                    <div class="answer-options" id="answer-options"></div>
+                </div>
+                <div class="navigation">
+                    <button class="btn btn-secondary" id="prev-btn" onclick="previousQuestion()" disabled>
+                        Previous
+                    </button>
+                    <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" disabled>
+                        Next
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="content">
+                <div class="mascot">🌈</div>
+                <h1>Thank You for Sharing</h1>
+                <div id="results-content"></div>
+                <div class="resources">
+                    <h3>🤗 Remember</h3>
+                    <ul>
+                        <li>You are brave and important</li>
+                        <li>It's always okay to talk to a trusted adult</li>
+                        <li>You deserve to feel safe and loved</li>
+                    </ul>
+                </div>
+                <div class="help-resources">
+                    <h3>🆘 If you need help</h3>
+                    <div class="help-cards">
+                        <div class="help-card">
+                            <h4>Talk to someone you trust</h4>
+                            <p>A teacher, school counselor, family member, or friend's parent</p>
+                        </div>
+                        <div class="help-card">
+                            <h4>Call for help</h4>
+                            <p>Emergency: 911<br>
+                            Childhelp Hotline: 1-800-422-4453<br>
+                            Kids Crisis Line: 1-800-843-5200</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="restartAssessment()">
+                    Start Over
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scorm-api.js"></script>
+    <script src="assessment.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
